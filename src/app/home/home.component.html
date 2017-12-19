@@ -1,0 +1,19 @@
+<div class="wrapper">
+  <h2>informacoes recebidas</h2>
+
+  <p>Em ate 48 horas avisaremos sobre a abertura da sua conta</p>
+  <p>para receber nossas recomendacoes de investimentos e comecar a investir, precismos conhecer seu perfil investidor.</p>
+  <p>Sao aoenas 4 perguntas, que irao guiar as suas decisoes de investimentos.</p>
+
+  <p>gostaria de responder ao perfil do investidoe?</p>
+
+</div>
+
+<button>Nao</button>
+<button (click)="showDialog = !showDialog" class="btn">Sim</button>
+
+<app-dialog [(visible)]="showDialog">
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque est vitae amet saepe consequuntur hic laudantium nisi earum, quidem numquam deserunt, tempore quos cupiditate provident obcaecati harum qui, delectus ex soluta? Dicta cum voluptas dolorum. Eligendi consequatur magni alias! Quo sunt minima non, temporibus dolores pariatur iste libero molestiae veniam?</p>
+  <input type="checkbox"> Li e aceito os termos
+  <button (click)="showDialog = !showDialog" class="btn">OK entendi</button>
+</app-dialog>
