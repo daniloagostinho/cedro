@@ -35,7 +35,27 @@ ul {
 
 .wrapper 
 li {
-    width: 40%;
+    width: 47%;
+    margin: 0 auto;
     list-style: none;
     font-size: 0.8em;
+}
+.wrapper
+.selects
+span {
+    font-size: 1.3em;
+}
+
+.wrapper
+.selects 
+{
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.wrapper
+.selects
+select {
+    width: 100%;
 }
