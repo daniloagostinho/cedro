@@ -3,3 +3,8 @@
     color: #fff;
     text-transform: uppercase;
 }
+/*estilo botao desabilidado*/
+button:disabled, 
+button[disabled] {
+    background-color: #ccc;
+}
