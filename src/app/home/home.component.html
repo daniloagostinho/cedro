@@ -14,6 +14,22 @@
 
 <app-dialog [(visible)]="showDialog">
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque est vitae amet saepe consequuntur hic laudantium nisi earum, quidem numquam deserunt, tempore quos cupiditate provident obcaecati harum qui, delectus ex soluta? Dicta cum voluptas dolorum. Eligendi consequatur magni alias! Quo sunt minima non, temporibus dolores pariatur iste libero molestiae veniam?</p>
-  <input type="checkbox"> Li e aceito os termos
-  <button (click)="showDialog = !showDialog" class="btn">OK entendi</button>
+  <form>
+    <div class="form-group">
+      <input
+      required
+      ngModel
+      name="termos" 
+      id="termos"
+      type="checkbox"
+      (change)="log(termos)" 
+      #termos="ngModel" 
+      class="form-group"> Li e aceito os termos
+    </div>
+    <button 
+    [disabled]="!termos.valid"
+    (click)="showDialog = !showDialog"
+     class="btn-termos"
+     >OK entendi</button>
+  </form>
 </app-dialog>
