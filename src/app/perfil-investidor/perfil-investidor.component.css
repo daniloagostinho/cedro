@@ -47,6 +47,26 @@ span {
     padding-bottom: 10px;
 }
 
+.wrapper 
+.btn {
+    margin-top: 10px;
+    float: right;
+    background: transparent;
+    width: 15%;
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    color: #333;
+    text-transform: uppercase;
+}
+
+
+.wrapper 
+button.btn.voltar {
+    margin-left: 10px;
+}
+
 .wrapper
 .selects 
 {
