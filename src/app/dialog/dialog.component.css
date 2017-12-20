@@ -17,7 +17,7 @@
     margin-right: auto;
     margin-left: auto;
     min-height: 200px;
-    width: 90%;
+    width: 30%;
     max-width: 520px;
     background-color: #fff;
     padding: 12px;
@@ -37,5 +37,5 @@
     position: absolute;
     top: 8px;
     right: 8px;
-    font-size: 1.2em;
+    font-size: 0.8em;
   }

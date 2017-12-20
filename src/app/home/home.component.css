@@ -1,10 +1,54 @@
-.btn-termos {
-    background-color: orange;
-    color: #fff;
-    text-transform: uppercase;
+.wrapper {
+    max-width: 500px;
+    margin: 50px auto;
+    text-align: center;
 }
+
+.wrapper 
+h2 {
+    color: orange;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.wrapper
+p:nth-child(6) {
+    margin-top: 50px;
+}
+
 /*estilo botao desabilidado*/
 button:disabled, 
 button[disabled] {
     background-color: #ccc;
+}
+
+/*estilo botao habilitado*/
+.btn-termos {
+    background-color: orange;
+    color: #fff;
+    text-transform: uppercase;
+
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0px 20px;
+}
+
+.modal-wrapper
+h3 {
+    color: #a52526;
+    text-align: center;
+    font-family: 'Trebuchet MS';
+  }
+.modal-wrapper 
+p {
+    font-family: 'Trebuchet MS';
+    font-size: 0.9em;
+    font-weight: bold;
+    padding-bottom: 20px;
+    border-bottom: 2px dashed #ccc;
+}
+.modal-wrapper
+span {
+    font-size: 0.8em;
+    font-family: 'Arial';
 }
