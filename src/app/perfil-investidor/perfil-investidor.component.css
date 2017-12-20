@@ -1,0 +1,41 @@
+.wrapper {
+    max-width: 900px;
+    margin: 50px auto;
+    text-align: center;
+
+    font-family: "Arial";
+}
+
+.wrapper 
+h1 {
+    color: #a52526;
+    font-size: 1.2 em;
+    text-transform: uppercase;
+}
+
+.wrapper 
+p {
+    font-size: 1.2em;
+}
+
+
+.wrapper 
+span {
+    text-transform: uppercase;
+}
+
+/*color: #a52526;*/
+
+.wrapper 
+ul {
+    display: flex;
+    padding: 50px 0 50px;
+    border-bottom: 2px dashed #ddd;
+}
+
+.wrapper 
+li {
+    width: 40%;
+    list-style: none;
+    font-size: 0.8em;
+}
