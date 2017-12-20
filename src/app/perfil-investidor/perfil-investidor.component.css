@@ -67,6 +67,25 @@ button.btn.voltar {
     margin-left: 10px;
 }
 
+/*estilo botao desabilidado*/
+button:disabled, 
+button[disabled] {
+    background-color: #ccc;
+}
+
+/*estilo botao habilitado*/
+.btn-salvar{
+    background-color: orange;
+    color: #fff;
+    margin-top: 10px;
+    float: right;
+    width: 15%;
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
 .wrapper
 .selects 
 {
