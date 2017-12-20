@@ -7,6 +7,11 @@
 }
 
 .wrapper 
+hr {
+    border: 1px solid #fffafa;
+}
+
+.wrapper 
 h2 {
     color: #e9b95f;
     text-transform: uppercase;
