@@ -5,7 +5,15 @@
     <p>1. Qual o seu perfil em relacao aos seus investimentos?</p>
     <ul>
       <li>
-        <input required ngModel name="termos" id="termos" type="radio" (change)="log(termos)" #termos="ngModel" class="form-group">
+        <input 
+        required 
+        name="gender" value="male"
+        ngModel name="termos" 
+        id="termos" 
+        type="radio" 
+        (change)="log(termos)" 
+        #pergunta1="ngModel" 
+        class="form-group">
         <span>Preserar meu dinheiro
           <br> sem correr riscos</span>
       </li>
@@ -130,5 +138,5 @@
       </ul>
   </div>
   <button class="btn voltar">voltar</button>
-  <button class="btn salvar" (click)="showDialog = !showDialog" class="btn">Salvar</button>
+  <button class="btn salvar" [disabled]="!pergunta1.valid">Salvar</button>
 </div>
