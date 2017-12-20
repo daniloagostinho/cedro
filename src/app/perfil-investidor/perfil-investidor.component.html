@@ -7,8 +7,9 @@
       <li>
         <input 
         required 
-        name="gender" value="male"
-        ngModel name="termos" 
+        name="pergunta1" 
+        value="dinheiro"
+        ngModel 
         id="termos" 
         type="radio" 
         (change)="log(termos)" 
@@ -18,19 +19,38 @@
           <br> sem correr riscos</span>
       </li>
       <li>
-        <input required ngModel name="termos" id="termos" type="radio" (change)="log(termos)" #termos="ngModel" class="form-group">
+        <input
+        required 
+        ngModel 
+        name="pergunta2" 
+        id="termos" 
+        value="dinheiro2"
+        type="radio" 
+        (change)="log(termos)" 
+        #pergunta2="ngModel" 
+        class="form-group">
         <span>Ganhar mais dnheiro
           <br> assumindo riscos moderados</span>
       </li>
       <li>
-        <input required ngModel name="termos" id="termos" type="radio" (change)="log(termos)" #termos="ngModel" class="form-group">
+        <input 
+        required 
+        ngModel 
+        name="pergunta3" 
+        id="pergunta3"
+        value="dinheiro3" 
+        type="radio" 
+        (change)="log(termos)" 
+        #pergunta3="ngModel" 
+        class="form-group">
         <span>Ganhar mais dnheiro
           <br> assumindo riscos agressivos</span>
       </li>
     </ul>
   </div>
 
-  <div class="form-group">
+  <!--
+     <div class="form-group">
     <p>2. Por quanto tempo voce deseja manter os seus investimentos?</p>
     <ul>
       <li>
@@ -87,7 +107,7 @@
     </ul>
   </div>
 
-  <div class="form-group">
+    <div class="form-group">
     <p>4. Qual sua familiaridade com os tipos de investimentos abaixo?
       <br> Leve em consideracao o valor aplicado nos ultimos 2 anos.</p>
 
@@ -137,6 +157,10 @@
           </li>
       </ul>
   </div>
+  -->
+  
   <button class="btn voltar">voltar</button>
-  <button class="btn salvar" [disabled]="!pergunta1.valid">Salvar</button>
+  <button class="btn salvar" 
+  [disabled]="!pergunta1.valid && !pergunta2.valid && !pergunta3.valid "
+  >Salvar</button>
 </div>
