@@ -4,9 +4,18 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { DialogComponent } from './dialog/dialog.component';
 import { HomeComponent } from './home/home.component';
-import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+import { RouterModule, Routes } from '@angular/router';
 
 import { PerfilInvestidorComponent } from './perfil-investidor/perfil-investidor.component';
+
+const routes: Routes = [
+  { path: 'perfil', component: PerfilInvestidorComponent },
+  { path: '', component: HomeComponent, pathMatch: 'full' },
+];
+
+
 
 @NgModule({
   declarations: [
@@ -17,7 +26,8 @@ import { PerfilInvestidorComponent } from './perfil-investidor/perfil-investidor
   ],
   imports: [
     BrowserModule,
-    FormsModule, ReactiveFormsModule
+    FormsModule, ReactiveFormsModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

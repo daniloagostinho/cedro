@@ -23,19 +23,19 @@
         <input
         required
         ngModel
-        name="termos" 
+        name="termos"
         id="termos"
         type="checkbox"
-        (change)="log(termos)" 
-        #termos="ngModel" 
+        (change)="log(termos)"
+        #termos="ngModel"
         class="form-group"> <span>Li e aceito os termos e condições a cima</span>
       </div>
-      <button 
+     <button
       [disabled]="!termos.valid"
-      (click)="showDialog = !showDialog"
+      (click)="showDialog = !showDialog; goPerfil()"
       class="btn-termos"
       >OK entendi</button>
-      
+
     </form>
   </div>
 </app-dialog>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { RouterModule, Routes, Router } from '@angular/router';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   log(x) {
     console.log(x);
@@ -16,4 +16,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
+  goPerfil() {
+    this.router.navigate(['perfil']);
+  }
 }
