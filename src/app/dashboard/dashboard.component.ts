@@ -1,16 +1,32 @@
-import { PerfilInvestidorComponent } from './../perfil-investidor/perfil-investidor.component';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent {
+  getRespostas;
+  respostaArray = [];
 
-  constructor() { }
+  constructor() { 
+    this.getRespostas = JSON.stringify(localStorage.getItem("respostas"));
+    
+    //this.respostaArray = JSON.parse("[" + this.getRespostas + "]");
 
-  ngOnInit() {
+    this.respostaArray.push(JSON.parse("[" + this.getRespostas + "]"));
+
+    console.log(this.respostaArray);
+
+    this.respostaArray.map(function(obj) {
+      console.log(obj.value);
+    });
+
+
+    console.log('tipo de resposta array', this.respostaArray);
   }
+
+
+
 
 }

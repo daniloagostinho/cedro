@@ -13,6 +13,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   { path: 'perfil', component: PerfilInvestidorComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'dahsboard', component: DashboardComponent },
   { path: '', component: HomeComponent, pathMatch: 'full' },
 ];

@@ -1,20 +1,8 @@
-<!--
-<table>
-  <thead>
-    <th>Groups Name</th>
-    <th>Groups Items</th>
-  </thead>
-  <tbody>
-    <tr *ngFor="let group of groups">
-      <td>{{group.name}}</td>
-      <td>
-        <ul>
-          <li *ngFor="let item of group.item">{{item}}</li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
--->
+<h1>Respostas</h1>
 
-{{respostas}}
+<ul>
+  <li *ngFor="let resposta of respostaArray">
+    {{resposta}}
+  </li>
+</ul>
+

@@ -43,9 +43,14 @@ export class PerfilInvestidorComponent{
     }));
 
   console.log('>>>> convertida', this.convertida);
+  //salva no localstorage
+  localStorage.setItem("respostas", this.convertida);
   }
 
   goDashboard() {
     this.router.navigate(['dahsboard']);
+  }
+  goHome(){
+    this.router.navigate(['home']);
   }
 }
