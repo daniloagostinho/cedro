@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component } from '@angular/core';
 
 import { NgForm } from '@angular/forms';
 
@@ -13,8 +13,8 @@ import { Investimento } from '../model/investimento';
   styleUrls: ['./perfil-investidor.component.css'],
   providers: [SelectService]
 })
-export class PerfilInvestidorComponent implements OnInit{
-  respostas;
+export class PerfilInvestidorComponent{
+  respostas = [];
   investimentos: Investimento[];
 
   constructor(
@@ -23,15 +23,15 @@ export class PerfilInvestidorComponent implements OnInit{
       this.investimentos = this.selectService.getInvestimento();
     }
 
-    ngOnInit() {
-      console.log(this.investimentos);
-    }
-
   registerUser(form: NgForm) {
     console.log(form.value);
 
-    this.respostas = JSON.stringify(form.value);
-    console.log('conversao', this.respostas);
+    this.respostas.push(form.value);
+    
+    //
+    //console.log('conversao', this.respostas);
+
+    console.log(this.respostas);
   }
 
   goDashboard() {
