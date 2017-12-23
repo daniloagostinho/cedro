@@ -16,8 +16,6 @@ export class PerfilInvestidorComponent {
 
   registerUser(form: NgForm) {
     console.log(form.value);
-    // {email: '...', password: '...'}
-    // ... <-- now use JSON.stringify() to convert form values to json.
 
     this.respostas = JSON.stringify(form.value);
     console.log('conversao', this.respostas);

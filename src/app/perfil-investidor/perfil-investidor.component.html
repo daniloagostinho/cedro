@@ -1,7 +1,7 @@
 <div class="wrapper">
   <h1>Perfil investidor - Questionário</h1>
 
-  <form  #contatoForm="ngForm" (ngSubmit)="registerUser(contatoForm); goDashboard()">
+  <form  #contatoForm="ngForm" (ngSubmit)="registerUser(contatoForm)">
     <div class="form-group">
       <p>1. Qual o seu perfil em relacao aos seus investimentos?</p>
       <ul>
@@ -122,16 +122,8 @@
     </ul>
   </div>
 
-  <button class="btn voltar">voltar</button>
-
-  <button class="btn-salvar"
-  type="submit"
-  [disabled]="!contatoForm.form.valid">Salvar</button>
-
-  </form>
-
-   <!--
-      <div class="form-group">
+ <!--
+  <div class="form-group">
     <p>4. Qual sua familiaridade com os tipos de investimentos abaixo?
       <br> Leve em consideracao o valor aplicado nos ultimos 2 anos.</p>
 
@@ -181,6 +173,18 @@
           </li>
       </ul>
   </div>
-  -->
+ -->
+  
+  <button class="btn voltar">voltar</button>
+
+  <button class="btn-salvar"
+  type="submit"
+  [disabled]="!contatoForm.form.valid">Salvar</button>
+
+  {{respostas}} 
+
+  </form>
+
+
 
 </div>
