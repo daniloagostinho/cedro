@@ -4,6 +4,13 @@ import { Investimento } from './../model/investimento';
 
 @Injectable()
 export class SelectService {
+  getQuestionatio1() {
+    return [
+      new Investimento('Preservar meu dinheiro' ),
+      new Investimento('Ganhar mais dinheiro' ),
+      new Investimento('Ganhar mais dinheiro' ),
+    ]
+  }
   getInvestimento() {
     return [
      new Investimento('Nunca operei' ),

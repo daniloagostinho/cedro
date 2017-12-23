@@ -3,7 +3,7 @@
 
   <form  #contatoForm="ngForm" (ngSubmit)="registerUser(contatoForm); goDashboard()">
     <div class="form-group">
-      <p>1. Qual o seu perfil em relacao aos seus investimentos?</p>
+      <p>1. Qual o seu perfil em relação aos seus investimentos?</p>
       <ul>
         <li>
           <input
@@ -14,7 +14,7 @@
           id="questionario1"
           type="radio"
           class="form-group">
-          <span>Preserar meu dinheiro
+          <span>Preservar meu dinheiro
             <br> sem correr riscos</span>
         </li>
         <li>
@@ -26,7 +26,7 @@
           value="Ganhar mais dnheiro assumindo riscos moderados"
           type="radio"
           class="form-group">
-          <span>Ganhar mais dnheiro
+          <span>Ganhar mais dinheiro
             <br> assumindo riscos moderados</span>
         </li>
         <li>
@@ -38,14 +38,14 @@
           value="Ganhar mais dnheiro assumindo riscos agressivos"
           type="radio"
           class="form-group">
-          <span>Ganhar mais dnheiro
+          <span>Ganhar mais dinheiro
             <br> assumindo riscos agressivos</span>
         </li>
       </ul>
     </div>
 
     <div class="form-group">
-    <p>2. Por quanto tempo voce deseja manter os seus investimentos?</p>
+    <p>2. Por quanto tempo você deseja manter os seus investimentos?</p>
     <ul>
       <li>
         <input 
@@ -84,7 +84,7 @@
   </div>
 
   <div class="form-group">
-    <p>3. Quantos % dessees investimentos voce pode precisar em um ano?</p>
+    <p>3. Quantos % desses investimentos você pode precisar em um ano?</p>
     <ul>
       <li>
         <input 
@@ -124,7 +124,7 @@
 
   <div class="form-group">
     <p>4. Qual sua familiaridade com os tipos de investimentos abaixo?
-      <br> Leve em consideracao o valor aplicado nos ultimos 2 anos.</p>
+      <br> Leve em consideracao o valor aplicado nos últimos 2 anos.</p>
 
     <ul class="selects">
       <li>
@@ -160,7 +160,7 @@
     <ul class="selects">
 
         <li>
-          <span>Acoes avista</span>
+          <span>Ações á vista</span>
           <select 
           required 
           ngModel 
@@ -175,7 +175,7 @@
         </li>
 
         <li>
-            <span>Aluguel de acoes, termos opcoes e futuros</span>
+            <span>Aluguel de ações, termos opções e futuros</span>
             <select 
             required 
             ngModel 
@@ -195,6 +195,7 @@
 
   <button class="btn-salvar"
   type="submit"
+  (click)="goNotificacao()"
   [disabled]="!contatoForm.form.valid">Salvar</button>
 
   </form>

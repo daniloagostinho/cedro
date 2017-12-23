@@ -47,9 +47,10 @@ export class PerfilInvestidorComponent{
   localStorage.setItem("respostas", this.convertida);
   }
 
-  goDashboard() {
-    this.router.navigate(['dahsboard']);
+  goNotificacao() {
+    this.router.navigate(['notificacao']);
   }
+
   goHome(){
     this.router.navigate(['home']);
   }

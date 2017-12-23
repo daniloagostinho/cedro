@@ -10,11 +10,13 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { PerfilInvestidorComponent } from './perfil-investidor/perfil-investidor.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { NotificacaoComponent } from './notificacao/notificacao.component';
 
 const routes: Routes = [
   { path: 'perfil', component: PerfilInvestidorComponent },
   { path: 'home', component: HomeComponent },
   { path: 'dahsboard', component: DashboardComponent },
+  { path: 'notificacao', component: NotificacaoComponent },
   { path: '', component: HomeComponent, pathMatch: 'full' },
 ];
 
@@ -26,7 +28,8 @@ const routes: Routes = [
     DialogComponent,
     HomeComponent,
     PerfilInvestidorComponent,
-    DashboardComponent
+    DashboardComponent,
+    NotificacaoComponent
   ],
   imports: [
     BrowserModule,
