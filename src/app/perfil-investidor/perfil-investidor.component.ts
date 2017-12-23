@@ -8,7 +8,7 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./perfil-investidor.component.css']
 })
 export class PerfilInvestidorComponent {
-  conversao;
+  respostas;
   constructor() { }
 
   registerUser(form: NgForm) {
@@ -16,8 +16,8 @@ export class PerfilInvestidorComponent {
     // {email: '...', password: '...'}
     // ... <-- now use JSON.stringify() to convert form values to json.
 
-    this.conversao = JSON.stringify(form.value);
-    console.log('conversao', this.conversao);
+    this.respostas = JSON.stringify(form.value);
+    console.log('conversao', this.respostas);
   }
 
 }
