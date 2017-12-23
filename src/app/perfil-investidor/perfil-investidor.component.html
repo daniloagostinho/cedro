@@ -1,7 +1,7 @@
 <div class="wrapper">
   <h1>Perfil investidor - Questionário</h1>
 
-  <form  #contatoForm="ngForm" (ngSubmit)="registerUser(contatoForm)">
+  <form  #contatoForm="ngForm" (ngSubmit)="registerUser(contatoForm); goDashboard()">
     <div class="form-group">
       <p>1. Qual o seu perfil em relacao aos seus investimentos?</p>
       <ul>

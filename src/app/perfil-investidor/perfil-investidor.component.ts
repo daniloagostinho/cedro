@@ -1,7 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Injectable } from '@angular/core';
 
 import { NgForm } from '@angular/forms';
 
+import { RouterModule, Routes, Router } from '@angular/router';
+
+@Injectable()
 @Component({
   selector: 'app-perfil-investidor',
   templateUrl: './perfil-investidor.component.html',
@@ -9,7 +12,7 @@ import { NgForm } from '@angular/forms';
 })
 export class PerfilInvestidorComponent {
   respostas;
-  constructor() { }
+  constructor(private router: Router) { }
 
   registerUser(form: NgForm) {
     console.log(form.value);
@@ -20,4 +23,7 @@ export class PerfilInvestidorComponent {
     console.log('conversao', this.respostas);
   }
 
+  goDashboard() {
+    this.router.navigate(['dahsboard']);
+  }
 }

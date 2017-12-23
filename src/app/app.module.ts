@@ -9,9 +9,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 
 import { PerfilInvestidorComponent } from './perfil-investidor/perfil-investidor.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   { path: 'perfil', component: PerfilInvestidorComponent },
+  { path: 'dahsboard', component: DashboardComponent },
   { path: '', component: HomeComponent, pathMatch: 'full' },
 ];
 
@@ -22,7 +24,8 @@ const routes: Routes = [
     AppComponent,
     DialogComponent,
     HomeComponent,
-    PerfilInvestidorComponent
+    PerfilInvestidorComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
