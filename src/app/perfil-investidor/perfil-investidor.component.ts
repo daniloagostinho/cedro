@@ -15,6 +15,7 @@ import { Investimento } from '../model/investimento';
 })
 export class PerfilInvestidorComponent{
   respostas = [];
+  convertida;
   investimentos: Investimento[];
 
   constructor(
@@ -32,6 +33,16 @@ export class PerfilInvestidorComponent{
     //console.log('conversao', this.respostas);
 
     console.log(this.respostas);
+
+    //conversao do obj recebido para array
+    this.convertida = this.respostas
+    .map((obj =>  {
+      return Object.keys(obj).map((chave) => {
+          return obj[chave];
+      });
+    }));
+
+  console.log('>>>> convertida', this.convertida);
   }
 
   goDashboard() {
