@@ -122,30 +122,34 @@
     </ul>
   </div>
 
- <!--
   <div class="form-group">
     <p>4. Qual sua familiaridade com os tipos de investimentos abaixo?
       <br> Leve em consideracao o valor aplicado nos ultimos 2 anos.</p>
 
     <ul class="selects">
-
       <li>
         <span>Titulos de renda fixa ou tesouro direto</span>
-        <select required ngModel name="termos" id="termos" type="radio" (change)="log(termos)" #termos="ngModel" class="form-group">
-          <option value="volvo">Volvo</option>
-          <option value="saab">Saab</option>
-          <option value="mercedes">Mercedes</option>
-          <option value="audi">Audi</option>
+        <select 
+        required 
+        ngModel 
+        name="termos" 
+        id="termos" 
+        type="radio" 
+        (change)="log(termos)" 
+        #termos="ngModel" 
+        class="form-group">
+          <option *ngFor="let investimento of investimentos" value="{{investimento.tipo}}" >
+            {{investimento.tipo}}
+          </option>
         </select>
       </li>
 
       <li>
-          <span>Titulos de renda fixa ou tesouro direto</span>
+          <span>Fundos de investimento</span>
           <select required ngModel name="termos" id="termos" type="radio" (change)="log(termos)" #termos="ngModel" class="form-group">
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="mercedes">Mercedes</option>
-            <option value="audi">Audi</option>
+            <option *ngFor="let investimento of investimentos" value="{{investimento.tipo}}" >
+              {{investimento.tipo}}
+            </option>
           </select>
         </li>
     </ul>
@@ -153,27 +157,24 @@
     <ul class="selects">
 
         <li>
-          <span>Titulos de renda fixa ou tesouro direto</span>
+          <span>Acoes avista</span>
           <select required ngModel name="termos" id="termos" type="radio" (change)="log(termos)" #termos="ngModel" class="form-group">
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="mercedes">Mercedes</option>
-            <option value="audi">Audi</option>
+            <option *ngFor="let investimento of investimentos" value="{{investimento.tipo}}" >
+              {{investimento.tipo}}
+            </option>
           </select>
         </li>
 
         <li>
-            <span>Titulos de renda fixa ou tesouro direto</span>
+            <span>Aluguel de acoes, termos opcoes e futuros</span>
             <select required ngModel name="termos" id="termos" type="radio" (change)="log(termos)" #termos="ngModel" class="form-group">
-              <option value="volvo">Volvo</option>
-              <option value="saab">Saab</option>
-              <option value="mercedes">Mercedes</option>
-              <option value="audi">Audi</option>
+              <option *ngFor="let investimento of investimentos" value="{{investimento.tipo}}" >
+                {{investimento.tipo}}
+              </option>
             </select>
           </li>
       </ul>
   </div>
- -->
   
   <button class="btn voltar">voltar</button>
 
@@ -182,6 +183,7 @@
   [disabled]="!contatoForm.form.valid">Salvar</button>
 
   {{respostas}} 
+
 
   </form>
 

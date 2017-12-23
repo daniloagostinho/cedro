@@ -1,8 +1,5 @@
-import { Model } from './model';
-
-export class Investimento extends Model {
+export class Investimento {
     constructor(
-        public tipoInvestimento: String) {
-            super();
+        public tipo: String) {
         }
 }
