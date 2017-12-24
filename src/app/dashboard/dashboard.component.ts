@@ -14,7 +14,7 @@ export class DashboardComponent {
     
     //this.respostaArray = JSON.parse("[" + this.getRespostas + "]");
 
-    this.respostaArray.push(JSON.parse("[" + this.getRespostas + "]"));
+    this.respostaArray.push(JSON.stringify("[" + this.getRespostas + "]"));
 
     console.log(this.respostaArray);
 
