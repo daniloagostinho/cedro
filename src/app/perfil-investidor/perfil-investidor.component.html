@@ -1,7 +1,7 @@
 <div class="wrapper">
   <h1>Perfil investidor - Questionário</h1>
 
-  <form  #contatoForm="ngForm" (ngSubmit)="registerUser(contatoForm); goDashboard()">
+  <form  #contatoForm="ngForm" (ngSubmit)="registerUser(contatoForm); goNotificacao()">
     <div class="form-group">
       <p>1. Qual o seu perfil em relação aos seus investimentos?</p>
       <ul>
@@ -194,13 +194,7 @@
 
   <button class="btn-salvar"
   type="submit"
-  (click)="goNotificacao()"
   [disabled]="!contatoForm.form.valid">Salvar</button>
-
-  <ul>
-    <li *ngFor="let dado of dadosSelect">{{dado.tipo}}</li>
-  </ul>
-
   </form>
 
   <!-- for 

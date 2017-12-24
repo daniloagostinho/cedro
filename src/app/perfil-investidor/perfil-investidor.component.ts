@@ -58,6 +58,7 @@ export class PerfilInvestidorComponent implements OnInit {
       });
     }));
 
+
   console.log('>>>> convertida', this.convertida);
   //salva no localstorage
   localStorage.setItem("respostas", this.convertida);
