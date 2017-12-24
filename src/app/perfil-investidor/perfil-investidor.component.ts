@@ -1,28 +1,44 @@
-import { Component } from '@angular/core';
+import { HttpSelectService } from './../service/http-select.service';
+import { Component, OnInit } from '@angular/core';
 
 import { NgForm } from '@angular/forms';
 
 import { RouterModule, Routes, Router } from '@angular/router';
 
-import { SelectService } from './../service/select.service';
 import { Investimento } from '../model/investimento';
+
+import { Observable } from 'rxjs/Rx';
 
 @Component({
   selector: 'app-perfil-investidor',
   templateUrl: './perfil-investidor.component.html',
   styleUrls: ['./perfil-investidor.component.css'],
-  providers: [SelectService]
+  providers: [HttpSelectService]
 })
-export class PerfilInvestidorComponent{
+export class PerfilInvestidorComponent implements OnInit {
   respostas = [];
   convertida;
   investimentos: Investimento[];
 
+  public dadosSelect;
+
+  ngOnInit() {
+    this.getFoods();
+  }
+
   constructor(
-    private selectService: SelectService,
+    private httpSelectService: HttpSelectService,
     private router: Router) { 
-      this.investimentos = this.selectService.getInvestimento();
     }
+
+    getFoods() {
+    this.httpSelectService.getFoods()
+    .subscribe(
+            data => { this.dadosSelect = data},
+            err => console.error(err),
+            () => console.log('done loading foods')
+          );
+        }
 
   registerUser(form: NgForm) {
     console.log(form.value);

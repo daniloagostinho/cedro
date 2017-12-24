@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { CUSTOM_ELEMENTS_SCHEMA }      from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';  // replaces previous Http service
 import { AppComponent } from './app.component';
 import { DialogComponent } from './dialog/dialog.component';
 import { HomeComponent } from './home/home.component';
@@ -20,8 +22,6 @@ const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
 ];
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,9 +35,11 @@ const routes: Routes = [
     BrowserModule,
     FormsModule, 
     ReactiveFormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpClientModule
   ],
   providers: [],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

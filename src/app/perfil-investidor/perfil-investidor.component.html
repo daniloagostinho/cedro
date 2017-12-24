@@ -136,8 +136,8 @@
         id="questionario4" 
         value="investimento.tipo"
         class="form-group">
-          <option *ngFor="let investimento of investimentos" value="{{investimento.tipo}}" >
-            {{investimento.tipo}}
+          <option *ngFor="let dado of dadosSelect" value="{{dado.tipo}}" >
+            {{dado.tipo}}
           </option>
         </select>
       </li>
@@ -150,15 +150,14 @@
           id="questionario4.1" 
           value="investimento.tipo"
           class="form-group">
-            <option *ngFor="let investimento of investimentos" value="{{investimento.tipo}}" >
-              {{investimento.tipo}}
+            <option *ngFor="let dado of dadosSelect" value="{{dado.tipo}}" >
+              {{dado.tipo}}
             </option>
           </select>
         </li>
     </ul>
 
     <ul class="selects">
-
         <li>
           <span>Ações á vista</span>
           <select 
@@ -168,8 +167,8 @@
           id="questionario4.2" 
           value="investimento.tipo"
           class="form-group">
-            <option *ngFor="let investimento of investimentos" value="{{investimento.tipo}}" >
-              {{investimento.tipo}}
+            <option *ngFor="let dado of dadosSelect" value="{{dado.tipo}}" >
+              {{dado.tipo}}
             </option>
           </select>
         </li>
@@ -183,8 +182,8 @@
             id="questionario4.3" 
             value="investimento.tipo" 
             class="form-group">
-              <option *ngFor="let investimento of investimentos" value="{{investimento.tipo}}" >
-                {{investimento.tipo}}
+              <option *ngFor="let dado of dadosSelect" value="{{dado.tipo}}" >
+                {{dado.tipo}}
               </option>
             </select>
           </li>
@@ -197,6 +196,10 @@
   type="submit"
   (click)="goNotificacao()"
   [disabled]="!contatoForm.form.valid">Salvar</button>
+
+  <ul>
+    <li *ngFor="let dado of dadosSelect">{{dado.tipo}}</li>
+  </ul>
 
   </form>
 
