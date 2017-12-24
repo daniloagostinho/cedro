@@ -42,22 +42,7 @@ export class PerfilInvestidorComponent implements OnInit {
 
   registerUser(form: NgForm) {
     console.log(form.value);
-
-    this.respostas.push(form.value);
-    
-    //
-    //console.log('conversao', this.respostas);
-
-    console.log(this.respostas);
-
-    //conversao do obj recebido para array
-    this.convertida = this.respostas
-    .map((obj =>  {
-      return Object.keys(obj).map((chave) => {
-          return obj[chave];
-      });
-    }));
-
+    this.convertida = JSON.stringify(form.value);
 
   console.log('>>>> convertida', this.convertida);
   //salva no localstorage

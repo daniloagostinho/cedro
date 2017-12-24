@@ -7,26 +7,25 @@ import { Component } from '@angular/core';
 })
 export class DashboardComponent {
   getRespostas;
-  respostaArray = [];
+  respostaObjeto;
+  keys;
+  message;
 
-  constructor() { 
-    this.getRespostas = JSON.stringify(localStorage.getItem("respostas"));
-    
-    //this.respostaArray = JSON.parse("[" + this.getRespostas + "]");
+  constructor() {
+    this.getRespostas = JSON.parse(localStorage.getItem("respostas"));
+    console.log(this.getRespostas);
 
-    this.respostaArray.push(this.getRespostas);
-
-    console.log(this.respostaArray);
-
-    this.respostaArray.map(function(obj) {
-      console.log(obj.value);
-    });
+    if(this.hasChaveLocalStorage("respostas"))
+      this.keys = Object.keys(this.getRespostas).map(key => key);
+    else
+      this.message = "Não existe resposta";
 
 
-    console.log('tipo de resposta array', this.respostaArray);
+    console.log(this.hasChaveLocalStorage("respostas"));
+    console.log(this.hasChaveLocalStorage("teste"));
   }
 
-
-
-
+  public hasChaveLocalStorage(key: string):boolean {
+    return !!localStorage.getItem(key)
+  }
 }
