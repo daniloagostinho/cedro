@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit} from '@angular/core';
 
 @Component({
   selector: 'app-dashboard',
@@ -10,6 +10,10 @@ export class DashboardComponent {
   respostaObjeto;
   keys;
   message;
+
+  ngAfterViewInit() {
+    localStorage.clear();
+  }
 
   constructor() {
     this.getRespostas = JSON.parse(localStorage.getItem("respostas"));
