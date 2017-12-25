@@ -1,30 +1,24 @@
 .wrapper {
-    max-width: 500px;
-    margin: 50px auto;
-    text-align: center;
+  max-width: 500px;
+  margin: 50px auto;
+  text-align: center;
+  font-family: "Arial";
 
-    font-family: "Arial";
-}
-
-.wrapper 
-hr {
+  hr {
     border: 1px solid #fffafa;
-}
+  }
 
-.wrapper 
-h2 {
+  h2 {
     color: #e9b95f;
     text-transform: uppercase;
     font-size: 0.9rem;
-}
+  }
 
-.wrapper 
-p {
+  p {
     font-size: 0.8em;
-}
+  }
 
-.wrapper 
-.btn {
+  .btn {
     margin-top: 10px;
     background: transparent;
     width: 20%;
@@ -33,42 +27,44 @@ p {
     border: 1px solid purple;
     color: purple;
     text-transform: uppercase;
+  }
 }
 
-
-/*estilo botao desabilidado*/
-button:disabled, 
-button[disabled] {
+/*botao desabilidado*/
+button {
+  &:disabled,
+  &[disabled] {
     background-color: #ccc;
+  }
 }
 
-/*estilo botao habilitado*/
+
+/*botao habilitado*/
 .btn-termos {
-    background-color: orange;
-    color: #fff;
-    text-transform: uppercase;
-
-    width: 100%;
-    padding: 10px;
-    margin: 20px 0 20px;
+  background-color: orange;
+  color: #fff;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 10px;
+  margin: 20px 0 20px;
 }
 
-.modal-wrapper
-h3 {
+.modal-wrapper {
+  h3 {
     color: #a52526;
     text-align: center;
     font-family: 'Trebuchet MS';
   }
-.modal-wrapper 
-p {
+
+  p {
     font-family: 'Trebuchet MS';
     font-size: 0.9em;
     font-weight: bold;
     padding-bottom: 20px;
     border-bottom: 2px dashed #ccc;
-}
-.modal-wrapper
-span {
+  }
+  span {
     font-size: 0.8em;
     font-family: 'Arial';
+  }
 }
