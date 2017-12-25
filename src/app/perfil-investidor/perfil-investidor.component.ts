@@ -9,7 +9,6 @@ import { Investimento } from '../model/investimento';
 
 import { Observable } from 'rxjs/Rx';
 
-import { AuthGuard } from './../auth.guard';
 
 @Component({
   selector: 'app-perfil-investidor',
@@ -30,8 +29,7 @@ export class PerfilInvestidorComponent implements OnInit {
 
   constructor(
     private httpSelectService: HttpSelectService,
-    private router: Router,
-    private authGuard: AuthGuard) { 
+    private router: Router) { 
     }
 
     getFoods() {
@@ -50,8 +48,7 @@ export class PerfilInvestidorComponent implements OnInit {
     console.log('>>>> convertida', this.convertida);
     //salva no localstorage
     localStorage.setItem("respostas", this.convertida);
-
-    return this.authGuard.checkLogin('/dahsboard');
+    
   }
 
   goNotificacao() {

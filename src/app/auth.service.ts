@@ -7,16 +7,15 @@ import 'rxjs/add/operator/delay';
 
 @Injectable()
 export class AuthService {
-  isLoggedIn = false;
+  isAuthenticated() {
+    // get the auth token from localStorage
+    let token = localStorage.getItem('access_token');
 
-  // store the URL so we can redirect after logging in
-  redirectUrl: string;
+    // check if token is set, then...
+    if (token) {
+        return true;
+    }
 
-  login(): Observable<boolean> {
-    return Observable.of(true).delay(1000).do(val => this.isLoggedIn = true);
-  }
-
-  logout(): void {
-    this.isLoggedIn = false;
+    return false;
   }
 }

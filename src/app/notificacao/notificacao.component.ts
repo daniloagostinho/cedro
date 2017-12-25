@@ -13,6 +13,7 @@ export class NotificacaoComponent {
   constructor(private router: Router) { 
 
   setTimeout(() => { 
+    localStorage.setItem('access_token', "Rota dashboard desbloqueada");
   	this.router.navigate(['dahsboard']);
    }, 2200);
   }
