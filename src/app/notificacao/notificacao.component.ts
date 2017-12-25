@@ -10,9 +10,9 @@ import { RouterModule, Routes, Router } from '@angular/router';
 })
 export class NotificacaoComponent {
 
-  constructor(private router: Router) { 
+  constructor(private router: Router) {
 
-  setTimeout(() => { 
+  setTimeout(() => {
       localStorage.setItem('access_token', "Permissão pra acessa o dahsboard");
       this.router.navigate(['dahsboard']);
    }, 2200);
