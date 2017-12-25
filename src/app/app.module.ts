@@ -18,11 +18,11 @@ import { AuthGuard } from './auth.guard';
 import { AuthService } from './auth.service';
 
 const routes: Routes = [
-  { path: 'perfil-investimento', 
-  component: PerfilInvestidorComponent, 
+  { path: 'perfil-investimento',
+  component: PerfilInvestidorComponent,
   canActivate: [AuthGuard], },
   { path: 'home', component: HomeComponent },
-  { path: 'dahsboard', 
+  { path: 'dahsboard',
   component: DashboardComponent,
   canActivate: [AuthGuard], },
   { path: 'notificacao', component: NotificacaoComponent },
@@ -40,7 +40,7 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
-    FormsModule, 
+    FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot(routes),
     HttpClientModule
