@@ -25,6 +25,7 @@ export class PerfilInvestidorComponent implements OnInit {
 
   ngOnInit() {
     this.getFoods();
+    localStorage.clear();
   }
 
   constructor(

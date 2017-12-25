@@ -10,14 +10,11 @@ export class HomeComponent implements OnInit {
 
   constructor(private router: Router) { }
 
-  log(x) {
-    console.log(x);
-  }
-
   ngOnInit() {
   }
 
   goPerfil() {
-    this.router.navigate(['perfil']);
+    localStorage.setItem('access_token', "Permissão pra acessa o Perfil Investimento");
+    this.router.navigate(['perfil-investimento']);
   }
 }

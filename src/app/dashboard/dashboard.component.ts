@@ -28,4 +28,8 @@ export class DashboardComponent {
   public hasChaveLocalStorage(key: string):boolean {
     return !!localStorage.getItem(key)
   }
+
+
+
+
 }

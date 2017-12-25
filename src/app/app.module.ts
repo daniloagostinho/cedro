@@ -18,7 +18,9 @@ import { AuthGuard } from './auth.guard';
 import { AuthService } from './auth.service';
 
 const routes: Routes = [
-  { path: 'perfil', component: PerfilInvestidorComponent },
+  { path: 'perfil-investimento', 
+  component: PerfilInvestidorComponent, 
+  canActivate: [AuthGuard], },
   { path: 'home', component: HomeComponent },
   { path: 'dahsboard', 
   component: DashboardComponent,
