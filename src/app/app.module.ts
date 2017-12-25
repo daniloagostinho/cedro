@@ -17,15 +17,19 @@ import { NotificacaoComponent } from './notificacao/notificacao.component';
 import { AuthGuard } from './auth.guard';
 import { AuthService } from './auth.service';
 
+//criar um arquivo app.routing e importar aqui..
+
 const routes: Routes = [
-  { path: 'perfil-investimento',
+  { path: 'perfil-investidor',
   component: PerfilInvestidorComponent,
   canActivate: [AuthGuard], },
   { path: 'home', component: HomeComponent },
   { path: 'dahsboard',
   component: DashboardComponent,
   canActivate: [AuthGuard], },
-  { path: 'notificacao', component: NotificacaoComponent },
+  { path: 'notificacao',
+  component: NotificacaoComponent,
+  canActivate: [AuthGuard] },
   { path: '', component: HomeComponent, pathMatch: 'full' },
 ];
 

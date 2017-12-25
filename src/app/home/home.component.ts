@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   }
 
   goPerfil() {
-    localStorage.setItem('access_token', "Permissão pra acessa o Perfil Investimento");
-    this.router.navigate(['perfil-investimento']);
+    localStorage.setItem('access_token', "Permissão pra acessa o Perfil Investidor");
+    this.router.navigate(['perfil-investidor']);
   }
 }

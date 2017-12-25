@@ -25,12 +25,11 @@ export class PerfilInvestidorComponent implements OnInit {
 
   ngOnInit() {
     this.getFoods();
-    localStorage.clear();
   }
 
   constructor(
     private httpSelectService: HttpSelectService,
-    private router: Router) { 
+    private router: Router) {
     }
 
     getFoods() {
@@ -49,7 +48,7 @@ export class PerfilInvestidorComponent implements OnInit {
     console.log('>>>> convertida', this.convertida);
     //salva no localstorage
     localStorage.setItem("respostas", this.convertida);
-    
+
   }
 
   goNotificacao() {

@@ -8,7 +8,7 @@ export class AuthGuard implements CanActivate {
   base_url: string;
 
   constructor(
-    private authService: AuthService, 
+    private authService: AuthService,
     private router: Router) {}
 
   canActivate() {
