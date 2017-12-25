@@ -13,7 +13,7 @@ import { Observable } from 'rxjs/Rx';
 @Component({
   selector: 'app-perfil-investidor',
   templateUrl: './perfil-investidor.component.html',
-  styleUrls: ['./perfil-investidor.component.css'],
+  styleUrls: ['./perfil-investidor.component.scss'],
   providers: [HttpSelectService]
 })
 export class PerfilInvestidorComponent implements OnInit {

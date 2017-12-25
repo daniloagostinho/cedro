@@ -6,7 +6,7 @@ import { RouterModule, Routes, Router } from '@angular/router';
 @Component({
   selector: 'app-notificacao',
   templateUrl: './notificacao.component.html',
-  styleUrls: ['./notificacao.component.css']
+  styleUrls: ['./notificacao.component.scss']
 })
 export class NotificacaoComponent {
 
