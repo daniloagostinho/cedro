@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CUSTOM_ELEMENTS_SCHEMA }      from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';  // replaces previous Http service
 import { AppComponent } from './app.component';
@@ -14,10 +14,15 @@ import { PerfilInvestidorComponent } from './perfil-investidor/perfil-investidor
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NotificacaoComponent } from './notificacao/notificacao.component';
 
+import { AuthGuard } from './auth.guard';
+import { AuthService } from './auth.service';
+
 const routes: Routes = [
   { path: 'perfil', component: PerfilInvestidorComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'dahsboard', component: DashboardComponent },
+  { path: 'dahsboard', 
+  component: DashboardComponent,
+  canActivate: [AuthGuard], },
   { path: 'notificacao', component: NotificacaoComponent },
   { path: '', component: HomeComponent, pathMatch: 'full' },
 ];
@@ -38,7 +43,10 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    AuthGuard,
+    AuthService
+  ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })

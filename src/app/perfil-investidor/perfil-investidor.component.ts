@@ -9,6 +9,8 @@ import { Investimento } from '../model/investimento';
 
 import { Observable } from 'rxjs/Rx';
 
+import { AuthGuard } from './../auth.guard';
+
 @Component({
   selector: 'app-perfil-investidor',
   templateUrl: './perfil-investidor.component.html',
@@ -28,7 +30,8 @@ export class PerfilInvestidorComponent implements OnInit {
 
   constructor(
     private httpSelectService: HttpSelectService,
-    private router: Router) { 
+    private router: Router,
+    private authGuard: AuthGuard) { 
     }
 
     getFoods() {
@@ -44,9 +47,11 @@ export class PerfilInvestidorComponent implements OnInit {
     console.log(form.value);
     this.convertida = JSON.stringify(form.value);
 
-  console.log('>>>> convertida', this.convertida);
-  //salva no localstorage
-  localStorage.setItem("respostas", this.convertida);
+    console.log('>>>> convertida', this.convertida);
+    //salva no localstorage
+    localStorage.setItem("respostas", this.convertida);
+
+    return this.authGuard.checkLogin('/dahsboard');
   }
 
   goNotificacao() {
