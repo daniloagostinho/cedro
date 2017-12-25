@@ -1,10 +1,13 @@
-<h1>Respostas</h1>
+<div class="wrapper">
+  <h1>Respostas</h1>
 
-<ul *ngIf="hasChaveLocalStorage('respostas')">
-  <li *ngFor="let key of keys">
-    <h2>{{key}}</h2>
-    <p>{{getRespostas[key]}}</p>
-  </li>
-</ul>
+  <ul *ngIf="hasChaveLocalStorage('respostas')">
+    <li *ngFor="let key of keys">
+      <h2>{{key}}</h2>
+      <p>R: {{getRespostas[key]}}</p>
+    </li>
+  </ul>
 
-<span *ngIf="!hasChaveLocalStorage('respostas') && message">{{message}}</span>
+  <span *ngIf="!hasChaveLocalStorage('respostas') && message">{{message}}</span>
+
+</div>

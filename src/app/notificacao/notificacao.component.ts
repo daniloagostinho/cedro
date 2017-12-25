@@ -14,7 +14,7 @@ export class NotificacaoComponent {
 
   setTimeout(() => { 
   	this.router.navigate(['dahsboard']);
-   }, 8000);
+   }, 2200);
   }
 
 

@@ -20,7 +20,8 @@ p {
 
 
 .wrapper 
-span {
+span,
+label {
     text-transform: uppercase;
 }
 

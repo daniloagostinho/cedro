@@ -74,7 +74,7 @@ h2 {
   
   #left .pie {
     z-index: 1;
-    -webkit-animation: left 4s linear both;
+    -webkit-animation: left 1s linear both;
   }
   
   @-webkit-keyframes left {
@@ -91,8 +91,8 @@ h2 {
   }
   
   #right .pie {
-    -webkit-animation: right 4s linear both;
-    -webkit-animation-delay: 4s;
+    -webkit-animation: right 1s linear both;
+    -webkit-animation-delay: 1s;
   }
   
   @-webkit-keyframes right {

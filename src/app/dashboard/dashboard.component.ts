@@ -15,11 +15,11 @@ export class DashboardComponent {
     this.getRespostas = JSON.parse(localStorage.getItem("respostas"));
     console.log(this.getRespostas);
 
-    if(this.hasChaveLocalStorage("respostas"))
+    if(this.hasChaveLocalStorage("respostas")) {
       this.keys = Object.keys(this.getRespostas).map(key => key);
-    else
+    } else {
       this.message = "Não existe resposta";
-
+    }
 
     console.log(this.hasChaveLocalStorage("respostas"));
     console.log(this.hasChaveLocalStorage("teste"));
