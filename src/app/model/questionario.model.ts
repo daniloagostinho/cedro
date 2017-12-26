@@ -1,5 +1,5 @@
 export class Questionario {
     constructor(
-        public questao: String) {
+        public questao) {
         }
 }
