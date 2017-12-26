@@ -16,6 +16,8 @@ import { NotificacaoComponent } from './notificacao/notificacao.component';
 
 import { AuthGuard } from './auth.guard';
 import { AuthService } from './auth.service';
+import { Page404Component } from './page-404/page-404.component';
+import { Page401Component } from './page-401/page-401.component';
 
 //criar um arquivo app.routing e importar aqui..
 
@@ -31,6 +33,9 @@ const routes: Routes = [
   component: NotificacaoComponent,
   canActivate: [AuthGuard] },
   { path: '', component: HomeComponent, pathMatch: 'full' },
+  {path: '404', component: Page404Component},
+  {path: '401', component: Page401Component},
+  {path: '**', redirectTo: '/404'}
 ];
 
 @NgModule({
@@ -40,7 +45,9 @@ const routes: Routes = [
     HomeComponent,
     PerfilInvestidorComponent,
     DashboardComponent,
-    NotificacaoComponent
+    NotificacaoComponent,
+    Page404Component,
+    Page401Component
   ],
   imports: [
     BrowserModule,

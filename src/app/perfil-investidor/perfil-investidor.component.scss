@@ -92,45 +92,4 @@ $color-not-checked: transparent;
       border-bottom: 1px solid orange;
     }
   }
-
-  input[type="radio"] {
-    display: none;
-  }
-
-  input {
-    + label {
-
-      span {
-        display: inline-block;
-        vertical-align: middle;
-        cursor: pointer;
-        border-radius: 100%;
-        background-repeat: no-repeat;
-        background-position: center;
-        text-align: center;
-
-        width: 15px;
-        height: 15px;
-
-        img {
-          opacity: 0;
-          transition: all .3s ease;
-          position: relative;
-          bottom: 12px;
-          padding: 10px;
-        }
-    }
-  }
-
-  &[id^="questao"] + label span,
-  &[id^="questionario"] + label span {
-    background-color: $color-not-checked;
-    border: 2px solid #333;
-  }
-
-  &:checked + label span img {
-    opacity: 1;
-  }
-  }
-
 }
