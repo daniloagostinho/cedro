@@ -1,4 +1,5 @@
-$color-1: red;
+$color-not-checked: transparent;
+
 .wrapper {
   max-width: 900px;
   margin: 50px auto;
@@ -100,37 +101,36 @@ $color-1: red;
     + label {
 
       span {
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      margin: -1px 4px 0 0;
-      vertical-align: middle;
-      cursor: pointer;
-      border-radius: 50%;
-      background-repeat: no-repeat;
-      background-position: center;
-      text-align: center;
-      line-height: 44px;
+        display: inline-block;
+        vertical-align: middle;
+        cursor: pointer;
+        border-radius: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        text-align: center;
 
-      img {
-        width: 60%;
-        opacity: 0;
-        transition: all .3s ease;
-        position: relative;
-        bottom: 12px;
-      }
+        width: 15px;
+        height: 15px;
+
+        img {
+          opacity: 0;
+          transition: all .3s ease;
+          position: relative;
+          bottom: 12px;
+          padding: 10px;
+        }
     }
   }
 
-    &[id^="questao"] + label span,
-    &[id^="questionario"] + label span {
-      background-color: $color-1;
-    }
+  &[id^="questao"] + label span,
+  &[id^="questionario"] + label span {
+    background-color: $color-not-checked;
+    border: 2px solid #333;
+  }
 
-    &:checked + label span img {
-      opacity: 1;
-    }
-
+  &:checked + label span img {
+    opacity: 1;
+  }
   }
 
 }
