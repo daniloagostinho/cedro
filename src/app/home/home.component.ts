@@ -8,6 +8,7 @@ import { RouterModule, Routes, Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
+  showDialog;
   constructor(private router: Router) { }
 
   ngOnInit() {
