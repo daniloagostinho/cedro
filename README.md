@@ -1,6 +1,6 @@
 # Cedro Teste
 
-Teste desenvolvido para <a href="http://www.cedrotech.com/">Cedro Technologies</a> por Danilo Agostinho.
+Teste desenvolvido para <a href="http://www.cedrotech.com/">Cedro Technologies</a> por <a href="https://www.linkedin.com/in/danilo-silva-74a2259b">Danilo Agostinho</a>.
 
 ### Para reproduzir esse teste em sua máquina siga os passos:
 
