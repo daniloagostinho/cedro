@@ -1,3 +1,4 @@
+$color-1: red;
 .wrapper {
   max-width: 900px;
   margin: 50px auto;
@@ -90,4 +91,46 @@
       border-bottom: 1px solid orange;
     }
   }
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  input {
+    + label {
+
+      span {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin: -1px 4px 0 0;
+      vertical-align: middle;
+      cursor: pointer;
+      border-radius: 50%;
+      background-repeat: no-repeat;
+      background-position: center;
+      text-align: center;
+      line-height: 44px;
+
+      img {
+        width: 60%;
+        opacity: 0;
+        transition: all .3s ease;
+        position: relative;
+        bottom: 12px;
+      }
+    }
+  }
+
+    &[id^="questao"] + label span,
+    &[id^="questionario"] + label span {
+      background-color: $color-1;
+    }
+
+    &:checked + label span img {
+      opacity: 1;
+    }
+
+  }
+
 }
