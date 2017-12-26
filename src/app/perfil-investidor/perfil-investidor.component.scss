@@ -25,6 +25,10 @@ $color-not-checked: transparent;
     display: flex;
     padding: 50px 0 50px;
     border-bottom: 2px dashed #ddd;
+
+    &:nth-child(3){
+      border-bottom: none;
+    }
   }
 
   li {

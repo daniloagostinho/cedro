@@ -13,7 +13,7 @@ const routes: Routes = [
     component: PerfilInvestidorComponent,
     canActivate: [AuthGuard], },
     { path: 'home', component: HomeComponent },
-    { path: 'dahsboard',
+    { path: 'dashboard',
     component: DashboardComponent,
     canActivate: [AuthGuard], },
     { path: 'notificacao',

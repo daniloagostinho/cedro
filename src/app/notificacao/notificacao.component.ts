@@ -13,8 +13,8 @@ export class NotificacaoComponent {
   constructor(private router: Router) {
 
   setTimeout(() => {
-      localStorage.setItem('access_token', "Permissão pra acessa o dahsboard");
-      this.router.navigate(['dahsboard']);
+      localStorage.setItem('access_token', "Permissão pra acessa o dashboard");
+      this.router.navigate(['dashboard']);
    }, 2200);
   }
 }
