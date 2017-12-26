@@ -24,7 +24,7 @@ export class PerfilInvestidorComponent implements OnInit {
   public dadosSelect;
 
   ngOnInit() {
-    this.getFoods();
+    this.getDadosSelect();
   }
 
   constructor(
@@ -32,21 +32,17 @@ export class PerfilInvestidorComponent implements OnInit {
     private router: Router) {
     }
 
-    getFoods() {
-    this.httpSelectService.getFoods()
+    getDadosSelect() {
+    this.httpSelectService.getQuestoes()
     .subscribe(
             data => { this.dadosSelect = data},
-            err => console.error(err),
-            () => console.log('done loading foods')
+            err => console.error(err)
           );
         }
 
   registerUser(form: NgForm) {
-    console.log(form.value);
     this.convertida = JSON.stringify(form.value);
 
-    console.log('>>>> convertida', this.convertida);
-    //salva no localstorage
     localStorage.setItem("respostas", this.convertida);
 
   }

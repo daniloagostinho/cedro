@@ -1,3 +1,4 @@
+import { AppRoutingModule } from './app.routing';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -21,23 +22,6 @@ import { Page401Component } from './page-401/page-401.component';
 
 //criar um arquivo app.routing e importar aqui..
 
-const routes: Routes = [
-  { path: 'perfil-investidor',
-  component: PerfilInvestidorComponent,
-  canActivate: [AuthGuard], },
-  { path: 'home', component: HomeComponent },
-  { path: 'dahsboard',
-  component: DashboardComponent,
-  canActivate: [AuthGuard], },
-  { path: 'notificacao',
-  component: NotificacaoComponent,
-  canActivate: [AuthGuard] },
-  { path: '', component: HomeComponent, pathMatch: 'full' },
-  {path: '404', component: Page404Component},
-  {path: '401', component: Page401Component},
-  {path: '**', redirectTo: '/404'}
-];
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,7 +37,7 @@ const routes: Routes = [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(routes),
+    AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule
   ],
