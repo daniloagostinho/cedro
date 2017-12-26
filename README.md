@@ -9,17 +9,22 @@ Teste desenvolvido para <a href="http://www.cedrotech.com/" target="_blank">Cedr
 git clone https://github.com/daniloagostinho/cedro.git
 </pre> 
 
-#### 2. Instale as Dependências;
+#### 2. Entre na pasta raiz do teste;
+<pre>
+cd cedro/
+</pre> 
+
+#### 3. Instale as Dependências;
 <pre>
 npm install 
 </pre> 
 
-#### 3. Inicie o servidor;
+#### 4. Inicie o servidor;
 <pre>
 ng server
 </pre> 
 
-#### 4. Acesse o teste no endereço.
+#### 5. Acesse o teste no endereço.
 <pre>
 http://localhost:4200/
 </pre>
