@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CUSTOM_ELEMENTS_SCHEMA }      from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';  // replaces previous Http service
+import { HttpClientModule, HttpClient } from '@angular/common/http';  // replaces previous Http service
 import { AppComponent } from './app.component';
 import { DialogComponent } from './dialog/dialog.component';
 import { HomeComponent } from './home/home.component';
@@ -20,7 +20,16 @@ import { AuthService } from './auth.service';
 import { Page404Component } from './page-404/page-404.component';
 import { Page401Component } from './page-401/page-401.component';
 
+//translate
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
 //criar um arquivo app.routing e importar aqui..
+
+//funcao de translate
+export function HttpLoaderFactory(http: HttpClient) {
+    return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [
@@ -39,7 +48,14 @@ import { Page401Component } from './page-401/page-401.component';
     ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    TranslateModule.forRoot({
+        loader: {
+          provide: TranslateLoader,
+          useFactory: HttpLoaderFactory,
+          deps: [HttpClient]
+        }
+      })
   ],
   providers: [
     AuthGuard,

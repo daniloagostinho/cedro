@@ -1,0 +1,13 @@
+<div class="wrapper">
+  <div *ngIf="detalhes">
+    <ul>
+      <li *ngFor="let detalhe of detalhes" [routerLink]="['/about, detalhe.username']">
+        <div>
+          <img [src]="detalhe.avatar" alt="">
+          <h1>{{detalhe.name}}</h1>
+          <p>{{detalhe.username}}</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

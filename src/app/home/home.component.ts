@@ -1,21 +1,33 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterModule, Routes, Router } from '@angular/router';
 
+import { TranslateService } from '@ngx-translate/core';
+
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+    selector: 'app-home',
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
 
-  showDialog;
-  constructor(private router: Router) { }
+    user = {
+        name: 'Arthur',
+        age: 42
+      };
 
-  ngOnInit() {
-  }
+    showDialog;
+    constructor(
+        private router: Router,
+        private translate: TranslateService) {
+        translate.setDefaultLang('pt-BR');
+    }
 
-  goPerfil() {
-    localStorage.setItem('access_token', "Permissão pra acessa o Perfil Investidor");
-    this.router.navigate(['perfil-investidor']);
-  }
+    switchLanguage(language: string) {
+        this.translate.use(language);
+    }
+
+    goPerfil() {
+        localStorage.setItem('access_token', "Permissão pra acessa o Perfil Investidor");
+        this.router.navigate(['perfil-investidor']);
+    }
 }
