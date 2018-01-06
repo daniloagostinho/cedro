@@ -1,3 +1,5 @@
+import { DatepickerComponent } from './material-components/datepicker/datepicker.component';
+import { MaterialSharedModule } from './shared/material-shared.module';
 import { AppRoutingModule } from './app.routing';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -23,7 +25,7 @@ import { Page401Component } from './page-401/page-401.component';
 //translate
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-
+import { AutocompleteComponent } from './material-components/autocomplete/autocomplete.component';
 //criar um arquivo app.routing e importar aqui..
 
 //funcao de translate
@@ -40,7 +42,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     DashboardComponent,
     NotificacaoComponent,
     Page404Component,
-    Page401Component
+    Page401Component,
+    DatepickerComponent,
+    AutocompleteComponent
   ],
   imports: [
     BrowserModule,
@@ -49,6 +53,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    MaterialSharedModule,
     TranslateModule.forRoot({
         loader: {
           provide: TranslateLoader,
