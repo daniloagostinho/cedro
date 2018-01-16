@@ -17330,7 +17330,7 @@ webpackEmptyAsyncContext.id = "../../../../../src/$$_lazy_route_resource lazy re
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<!-- <app-home></app-home> -->\r\n<!--<app-perfil-investidor></app-perfil-investidor>-->\r\n<!--\r\n<router-outlet></router-outlet> -->\r\n\r\n<!-- <h1 appCor>Emerson!!</h1> -->\r\n\r\n<!-- <h2>dasjkbdhsba</h2>\r\n<div class=\"card-text\">dasd</div>\r\n<div class=\"card-text\">dasd</div>\r\n<div class=\"card-text\">sdadsa</div> -->\r\n\r\n<app-card></app-card>\r\n"
+module.exports = "<router-outlet></router-outlet>"
 
 /***/ }),
 
