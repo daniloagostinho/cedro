@@ -1,5 +1,9 @@
 {
     "Title": "INFORMATION RECEIVED",
     "Intro1": "In 48 hours we'll give you a return on opening your account.",
-    "Intro2": "To receive our investment recommendations and start investing, we need to know your investor profile."
+    "Intro2": "To receive our investment recommendations and start investing, we need to know your investor profile.",
+    "Intro3": "There are only four questions that will guide your investment decisions.",
+    "Intro4": "Would you like to respond to the Investor Profile?",
+    "botao1": "No",
+    "botao2": "Yes"
 }
