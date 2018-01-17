@@ -1,22 +1,23 @@
 <div class="wrapper">
   <img src="./assets/img/logo.png" alt="">
-  <h2 translate>informações recebidas</h2>
 
-  <p>{{ 'Intro1' | translate }}</p>
+  <h2 translate>{{ 'Title' }}</h2>
+
+  <p translate>{{ 'Intro1'}}</p>
 
   <hr>
-  <p>{{ 'Intro2' | translate }}</p>
-  <p>São apenas 4 perguntas, que irão guiar as suas decisões de investimentos.</p>
+  <p translate>{{ 'Intro2' }}</p>
 
-  <p>Gostaria de responder ao Perfil do investidor?</p>
+  <p translate>{{'Intro3' }}</p>
 
-  <button class="btn nao" (click)="showDialog = !showDialog">Nao</button>
-  <button class="btn sim" (click)="showDialog = !showDialog" class="btn">Sim</button>
+  <p translate>{{ 'Intro4' }}</p>
 
-  <div>
-
-  </div>
-
+  <button class="btn nao" (click)="showDialog = !showDialog" translate>{{'botao1'}}</button>
+  <button class="btn sim" (click)="showDialog = !showDialog" class="btn" translate>{{'botao2'}}</button>
+  
+  <br>
+  <br>
+  <!--aplicar depois-->
   <button (click)="switchLanguage('en')">en</button>
 
   <button (click)="switchLanguage('pt-BR')">pt</button>
